@@ -100,23 +100,22 @@ body.dark-theme {
 }
 
 /*==================== BASE ====================*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin-left: 1;
-  margin-right: 1;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior: smooth;
 }
 
-body {
-  margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
 
 h1,
@@ -676,143 +675,143 @@ img {
 }
 
 /*==================== QUALIFICATION ====================*/
-.qualification__tabs {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: var(--mb-2);
+.qualification__tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
 }
 
-.qualification__button {
-  font-size: var(--h3-font-size);
-  cursor: pointer;
-  font-weight: var(--font-medium);
+.qualification__button{
+    font-size:var(--h3-font-size);
+    cursor: pointer;
+    font-weight: var(--font-medium);
 }
 
-.qualification__button:hover {
-  color: var(--first-color);
+.qualification__button:hover{
+    color: var(--first-color);
 }
 
-.qualification__icon {
-  font-size: 1.8rem;
-  margin-right: var(--mb-0-25);
+.qualification__icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
 }
 
-.qualification__data {
-  display: grid;
-  grid-template-columns: 5fr max-content 5fr;
-  column-gap: 0rem;
+.qualification__data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
 }
 
-.qualification__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+.qualification__title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
 }
 
-.qualification__subtitle {
-  display: inline-block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
+.qualification__subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
 }
 
-.qualification__calender {
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+.qualification__calender{
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
 }
 
-.qualification__rounder {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  background-color: var(--first-color);
-  border-radius: 50%;
+.qualification__rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
 }
 
-.qualification__line {
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: var(--first-color);
-  transform: translate(6px, -7px);
+.qualification__line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
 }
 
-.qualification [data-content] {
-  display: none;
+.qualification [data-content]{
+    display: none;
 }
 
-.qualification__active[data-content] {
-  display: block;
+.qualification__active[data-content]{
+    display: block;
 }
 
-.qualification__button.qualification__active {
-  color: var(--first-color);
+.qualification__button.qualification__active{
+    color: var(--first-color);
 }
 
-.qualification__button {
-  cursor: pointer;
-  font-size: var(--small-font-size);
+.qualification__button{
+    cursor: pointer;
+    font-size: var(--small-font-size);
 }
 
-.qualification__button-modal {
-  cursor: pointer;
-  font-size: var(--small-font-size);
+.qualification__button-modal{
+    cursor: pointer;
+    font-size: var(--small-font-size);  
 }
 
-.qualification__modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  z-index: var(--z-modal);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
+.qualification__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
 }
 
-.qualification__modal-content {
-  position: relative;
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-  overflow: auto;
-  max-height: 100%;
+.qualification__modal-content{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: .5rem;
+    overflow: auto;
+    max-height: 100%;
 }
 
-.qualification__modal-title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1-5);
+.qualification__modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
 }
 
-.qualification__modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
-  cursor: pointer;
+.qualification__modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer
 }
 
-.qualification__modal-works {
-  row-gap: 1rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+.qualification__modal-works{
+    row-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
-.qualification__modal-work {
-  display: flex;
+.qualification__modal-work{
+    display: flex;
 }
 
-.qualification__modal-icon {
-  color: var(--first-color);
-  margin-right: var(--mb-0-25);
+.qualification__modal-icon{
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
 }
 
 /*==================== PROJECTS ====================*/
@@ -940,6 +939,12 @@ img {
 
 .certification__button:hover .button__icon {
   transform: translateX(0.25rem);
+}
+
+/*=================== ACTIVE MODAL =================== */
+.active-modal{
+    opacity: 1;
+    visibility: visible;
 }
 
 /*==================== CONTACT ME ====================*/
@@ -1999,10 +2004,7 @@ table.alt tfoot {
 }
 
 /* Button */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
+
 .button {
   -moz-appearance: none;
   -webkit-appearance: none;

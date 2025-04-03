@@ -1,177 +1,221 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/
-const navMenu = document.getElementById('nav-menu'), 
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+/* ===== Main Functions ===== */
+document.addEventListener("DOMContentLoaded", function () {
+  // ===== Mobile Menu Toggle =====
+  const navMenu = document.getElementById("nav-menu");
+  const navToggle = document.getElementById("nav-toggle");
+  const navClose = document.getElementById("nav-close");
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+  // Show Menu
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.add("show-menu");
+      document.body.style.overflow = "hidden";
+    });
+  }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
+  // Hide Menu
+  if (navClose) {
+    navClose.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+      document.body.style.overflow = "";
+    });
+  }
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+  // Close menu when clicking on a link
+  const navLinks = document.querySelectorAll(".nav__link, .footer__link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+      document.body.style.overflow = "";
+    });
+  });
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
-
-function toggleSkills(){
-    let itemClass = this.parentNode.className
-
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
+  // ===== Header Scroll Effect =====
+  function scrollHeader() {
+    const header = document.getElementById("header");
+    if (window.scrollY >= 80) {
+      header.classList.add("scroll-header");
+    } else {
+      header.classList.remove("scroll-header");
     }
-    if(itemClass === 'skills__content skills__close'){
-        this.parentNode.className = "skills__content skills__open"
+  }
+  window.addEventListener("scroll", scrollHeader);
+
+  // ===== Scroll Up Button =====
+  function scrollUp() {
+    const scrollUp = document.getElementById("scroll-up");
+    if (window.scrollY >= 560) {
+      scrollUp.classList.add("show-scroll");
+    } else {
+      scrollUp.classList.remove("show-scroll");
     }
-}
+  }
+  window.addEventListener("scroll", scrollUp);
 
-skillsHeader.forEach((el) =>{
-    el.addEventListener('click', toggleSkills)
-})
+  // ===== Dark/Light Theme Toggle =====
+  const themeButton = document.getElementById("theme-button");
+  const darkTheme = "dark-theme";
+  const iconTheme = "uil-sun";
 
-/*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
+  // Check for previously selected theme
+  const selectedTheme = localStorage.getItem("selected-theme");
+  const selectedIcon = localStorage.getItem("selected-icon");
 
-tabs.forEach(tab =>{
-    tab.addEventListener('click', () =>{
-        const target = document.querySelector(tab.dataset.target)
+  // Apply saved theme if exists
+  if (selectedTheme) {
+    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+      darkTheme
+    );
+    themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+      iconTheme
+    );
+  }
 
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification__active')
-            tabContent.style.display = "none";
-        })
-        target.classList.add('qualificiation__active')
-        target.style.display = "block";
+  // Toggle theme manually
+  themeButton.addEventListener("click", () => {
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
 
-        tabs.forEach(tab =>{
-            tab.classList.remove('qualification__active')
-        })
-        tab.classList.add('qualification__active')
-    })
-})
+    // Save theme preference
+    localStorage.setItem(
+      "selected-theme",
+      document.body.classList.contains(darkTheme) ? "dark" : "light"
+    );
+    localStorage.setItem(
+      "selected-icon",
+      themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun"
+    );
+  });
 
-/*==================== QUALIFICATION MODAL ====================*/
-const qmodalViews = document.querySelectorAll('.qualification__modal'),
-      qmodalBtns = document.querySelectorAll('.qualification__button-modal'),
-      qmodalCloses = document.querySelectorAll('.qualification__modal-close')
+  // ===== Animated Skill Bars =====
+  function animateSkills() {
+    const skills = document.querySelectorAll(".skills__percentage");
 
-let qmodal = function(modalCLick){
-    qmodalViews[modalCLick].classList.add('active-modal')
-}
+    skills.forEach((skill) => {
+      const skillLevel = skill.parentElement.getAttribute("data-level");
+      skill.style.width = skillLevel;
+    });
+  }
 
-qmodalBtns.forEach((qmodalBtn,i) =>{
-    qmodalBtn.addEventListener('click', () =>{
-        qmodal(i)
-    })
-})
-
-qmodalCloses.forEach((qmodalClose,i) =>{
-    qmodalClose.addEventListener('click', () =>{
-        qmodalViews.forEach((qmodalView) => {
-            qmodalView.classList.remove('active-modal')
-        })
-    })
-})
-
-/*==================== PORTFOLIO / BLOG SWIPER  ====================*/
-let swiper = new Swiper('.swiper-container', {
-    cssMode: true,
-    loop: true,
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      mousewheel: false,
-      preventInteractionOnTransition: true,
-    },
-});
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive(){
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+  // Initialize skill animation when skills section is in view
+  const skillsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateSkills();
         }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
-function scrollHeader(){
-    const nav = document.getElementById('header')
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+  const skillsSection = document.querySelector(".skills");
+  if (skillsSection) {
+    skillsObserver.observe(skillsSection);
+  }
 
-/*==================== SHOW SCROLL UP ====================*/ 
-function scrollUp(){
-    const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+  // ===== Smooth Scrolling =====
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
 
-/*==================== DARK LIGHT THEME ====================*/ 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Calculate position considering fixed header
+        const headerHeight = document.getElementById("header").offsetHeight;
+        const targetPosition = targetElement.offsetTop - headerHeight;
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+        // Update URL without jumping
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
+  // ===== Active Link Highlighting =====
+  const sections = document.querySelectorAll("section[id]");
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  function activateCurrentSection() {
+    const scrollPosition = window.scrollY + 100;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        document
+          .querySelector(`.nav__menu a[href="#${sectionId}"]`)
+          .classList.add("active-link");
+        document
+          .querySelector(`.footer__link[href="#${sectionId}"]`)
+          .classList.add("active-link");
+      } else {
+        document
+          .querySelector(`.nav__menu a[href="#${sectionId}"]`)
+          .classList.remove("active-link");
+        document
+          .querySelector(`.footer__link[href="#${sectionId}"]`)
+          .classList.remove("active-link");
+      }
+    });
+  }
+
+  // Run on initial load
+  activateCurrentSection();
+
+  // Run on scroll
+  window.addEventListener("scroll", activateCurrentSection);
+
+  // ===== Contact Form Handling =====
+  const contactForm = document.querySelector(".contact__form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get form values
+      const formData = {
+        name: this.querySelector('input[name="name"]').value.trim(),
+        email: this.querySelector('input[name="email"]').value.trim(),
+        subject: this.querySelector('input[name="subject"]').value.trim(),
+        message: this.querySelector('textarea[name="message"]').value.trim(),
+      };
+
+      // Simple validation
+      if (!formData.name || !formData.email || !formData.message) {
+        alert("Please fill in all required fields");
+        return;
+      }
+
+      // Email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        alert("Please enter a valid email address");
+        return;
+      }
+
+      // Here you would typically send the form data to a server
+      console.log("Form submitted:", formData);
+
+      // Show success message
+      alert("Thank you for your message! I will get back to you soon.");
+
+      // Reset form
+      this.reset();
+    });
+  }
+
+  // ===== Current Year in Footer =====
+  const currentYear = new Date().getFullYear();
+  document.getElementById("current-year").textContent = currentYear;
+});

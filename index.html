@@ -1,1467 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Adenuga | Data Scientist</title>
+    <meta
+      name="description"
+      content="Data Scientist with expertise in Python, R, and Machine Learning"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/pix.png" />
 
-    <!--==================== ME ====================-->
-    <link rel="icon" href="assets/img/pix.png">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
 
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!--    =========== Tracker =========      -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NYWM62ET3"></script>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2NYWM62ET3"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-2NYWM62ET3');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2NYWM62ET3");
     </script>
-    <title>Alex Adenuga Portfolio</title>
-</head>
+  </head>
 
-<body>
-    <!--==================== HEADER ====================-->
+  <body>
+    <!-- Header -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Alexadenuga</a>
+      <nav class="nav container">
+        <a href="#home" class="nav__logo">AlexAdenuga</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#projects" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Projects
-                        </a>
-                    </li>
-                   
-                    <li class="nav__item">
-                        <a href="#certification" class="nav__link">
-                            <i class="uil uil-newspaper nav__icon"></i> Certifications
-                        </a>
-                    </li>
-                
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#certification" class="nav__link">Certifications</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+          <button class="nav__close" id="nav-close">
+            <i class="uil uil-times"></i>
+          </button>
+        </div>
 
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
+        <div class="nav__btns">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <button class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <!--==================== MAIN ====================-->
+    <!-- Main Content -->
     <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/alexadenuga" target="_blank" class="home__social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
+      <!-- Home Section -->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <h1 class="home__title">Hi, I'm Alex</h1>
+            <h3 class="home__subtitle">Data Scientist</h3>
+            <p class="home__description">
+              Transforming data into actionable insights with advanced analytics
+              and machine learning.
+            </p>
 
-                        <a href="https://www.github.com/Alexadenuga" target="_blank" class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-
-                        <a href="https://www.twitter.com/@alexadenuga" target="_blank" class="home__social-icon">
-                            <i class="uil uil-twitter-alt"></i>
-                        </a>
-
-
-
-                        
-
-                        <!-- Personal Blog Link -->
-                        <!-- <a href="https://newstoday51.news.blog/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-pen"></i>
-                            </a> -->
-                    </div>
-
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-
-                                <image class="home__blob-img" x="20" y="10"
-                                    xlink:href="assets/img/About/pix2.png" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="home__data">
-                        <h1 class="home__title">Hi, I'm Alex</h1>
-                        <h3 class="home__subtitle"> A Data Scientist and Avid Learner</h3>
-                        
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll Down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My Introduction</span>
-
-            
-            <div class="about__container container grid">
-                <img src="assets/img/About/alex2.png" alt="" class="about__img">
-
-                <div class="about__data">
-                    <p align = "justify" >
-                        I am a dynamic and results-oriented Data Scientist with a proven track record in Python, R programming, Power BI, and SQL. Eagerly seeking an engaging role or collaboration that will harness my expertise in building robust statistical models and implementing predictive analytics. Armed with a keen ability to translate complex data into actionable insights, I am poised to contribute significantly to the strategic objectives of corporate organizations by leveraging cutting-edge data science techniques. Ready for an active challenge that aligns with my passion for driving innovation through data-driven decision-making. <br> <br> Armed with dual expertise—a Master's in Applied Modeling & Quantitative Methods and another in Statistics—and boasting over five years of hands-on experience in the field of Data Science, I specialize in harnessing data to deliver insightful, data-driven solutions. I bring a wealth of industry knowledge to any organization I join, ensuring a profound impact through my analytical prowess and commitment to producing valuable outcomes. <br><br> I am a natural problem solver, with meticulous attention to detail that enables me to identify and address issues quickly and efficiently. I have worked on extensive portfolio of projects that cuts across building machine learning models, data visualization, and data engineering. I am a team player with excellent communication skills, and I am always eager to learn new technologies and methodologies while working on challenging projects.
-                    </p>
-
-
-                    <div class="about__buttons">
-                        <a download="" href="assets/pdf/Alex_Adenuga__Analyst__ Resume.pdf" class="button button--flex resume">
-                            Download Resume<i class="uil uil-download-alt button__icon"></i>
-                        </a>
-
-
-                    </div>
-                </div>
+            <div class="home__social">
+              <a
+                href="https://www.linkedin.com/in/alexadenuga"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+              <a
+                href="https://www.github.com/Alexadenuga"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="uil uil-github-alt"></i>
+              </a>
+              <a
+                href="https://www.twitter.com/@alexadenuga"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="uil uil-twitter-alt"></i>
+              </a>
             </div>
 
-        </section>
+            <a href="#contact" class="button">Contact Me</a>
+          </div>
 
-        <!--==================== SKILLS ====================-->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">My Technical Level</span>
+          <div class="home__img">
+            <img
+              src="assets/img/About/pix2.png"
+              alt="Alex Adenuga"
+              class="home__blob-img"
+            />
+          </div>
+        </div>
+      </section>
 
-            <div class="skills__container container grid">
-                <div>
-                    <!--==================== SKILLS 1====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
+      <!-- About Section -->
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
 
-                            <div>
-                                <h1 class="skills__title">Development</h1>
-                                <span class="skills__subtitle">All About the Core</span>
-                            </div>
+        <div class="about__container container grid">
+          <img
+            src="assets/img/About/alex2.png"
+            alt="Alex Adenuga"
+            class="about__img"
+          />
 
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
+          <div class="about__data">
+            <p class="about__description">
+              I am a dynamic and results-oriented Data Scientist with a proven
+              track record in Python, R programming, Power BI, and SQL. Eagerly
+              seeking an engaging role or collaboration that will harness my
+              expertise in building robust statistical models and implementing
+              predictive analytics.
+            </p>
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Python</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__python">
-                                    </span>
-                                </div>
-                            </div>
-
-                          
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">PySpark</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__pyspark">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">R</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__r">
-                                    </span>
-                                </div>
-                            </div>
-
-
-
-                            <!-- <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Julia</h3>
-                                        <span class="skills__number">20%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__julia">
-                                        </span>
-                                    </div>
-                                </div> -->
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">MS Excel</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__excel">
-                                    </span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!--==================== SKILLS 2====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-server-network skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Frameworks</h1>
-                                <span class="skills__subtitle">Everyone Needs Support</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">NumPy</h3>
-                                    <span class="skills__number">80%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__np">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">pandas</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__pd">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">matplotlib</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__mtl">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">scikit-learn</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__sklearn">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Spark MLlib</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__mllib">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Pytorch</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__pytorch">
-                                    </span>
-                                </div>
-                            </div>
-                                         
-                            
-
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <!--==================== SKILLS 3====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-atom skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Machine Learning</h1>
-                                <span class="skills__subtitle">Theory, theory!</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Linear and Logistic Regression</h3>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__regression">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Decision Trees</h3>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__dt">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Ensemble Models</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__ensemble">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Clustering</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__clustering">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Convolutional Neural Networks</h3>
-                                    <span class="skills__number">80%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__cnn">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Graph Neural Networks</h3>
-                                    <span class="skills__number">60%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__gnn">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Recommender Systems</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__recsys">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Natural Language Processing</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__nlp">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Exploratory Data Analysis</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__eda">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Multi-modal Learning</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__mml">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Time Series</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__time">
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== SKILLS 4====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-cloud-lock skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Cloud and Engineering</h1>
-                                <span class="skills__subtitle">Fly Fast & High!</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">AWS Sagemaker</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__sagemaker">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">AWS EMR</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__emr">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">AWS Lambda</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__lambda">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Big Query</h3>
-                                    <span class="skills__number">40%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__bq">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Docker</h3>
-                                    <span class="skills__number">60%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__docker">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Apache Airflow</h3>
-                                    <span class="skills__number">40%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__airflow">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Kafka</h3>
-                                    <span class="skills__number">40%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__kafka">
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <!--==================== SKILLS 5====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-analysis skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Databases and Viz</h1>
-                                <span class="skills__subtitle">Wow! Factor</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">MySQL</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__sql">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">AWS Redshift</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__redshift">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Amazon RDS</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__rds">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Tableau</h3>
-                                    <span class="skills__number">50%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__tableau">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Power BI</h3>
-                                    <span class="skills__number">50%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__pbi">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Looker</h3>
-                                    <span class="skills__number">60%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__looker">
-                                    </span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-
+            <div class="about__buttons">
+              <a
+                download
+                href="assets/pdf/Alex_Adenuga__Analyst__ Resume.pdf"
+                class="button button--flex"
+              >
+                Download CV <i class="uil uil-download-alt button__icon"></i>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My Personal Journey</span>
+      <!-- Skills Section -->
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">My technical level</span>
 
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target="#education">
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
-
-                    <div class="qualification__button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
+        <div class="skills__container container grid">
+          <div class="skills__group">
+            <h3 class="skills__title">
+              <i class="uil uil-brackets-curly"></i> Development
+            </h3>
+            <div class="skills__list">
+              <div class="skills__item">
+                <div class="skills__info">
+                  <span class="skills__name">Python</span>
+                  <span class="skills__level">90%</span>
                 </div>
-
-                <div class="qualification__sections">
-                    <!--==================== QUALIFICATION CONTENT 1 ====================-->
-
-                    <div class="qualification__content qualification__active" data-content id="education">
-
-                        <!--==================== QUALIFICATION 1 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Masters of Science in Applied Modelling and Quantitative Methods</h3>
-                                <span class="qualification__subtitle">Trent University, ON, Canada</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2023-2024
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--==================== QUALIFICATION 2 ====================-->
-                        <div class="qualification__data">
-
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Master of Science in Statistics (Distinction)</h3>
-                                <span class="qualification__subtitle">University of Ilorin, Nigeria</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2017 - 2019
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== QUALIFICATION 3 ====================-->
-                        <div class="qualification__data">
-
-
-                            <div>
-                                <h3 class="qualification__title">BSc in Statistics (First Class Honors)</h3>
-                                <span class="qualification__subtitle">University of Ilorin, Nigeria</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2010-2014
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                    <!--==================== QUALIFICATION CONTENT 2 ====================-->
-
-                    <div class="qualification__content" data-content id="work">
-
-                        <!--==================== QUALIFICATION 1 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Data and Information Systems Specialist</h3>
-                                <span class="qualification__subtitle">Junior Achievement Northern and Easter Ontario</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    April 2023 - Present
-                                </div>
-
-                                <span
-                                    class="button button--flex button--small button--link qualification__button-modal">
-                                    What I did here
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </span>
-
-                                <div class="qualification__modal">
-                                    <div class="qualification__modal-content">
-                                        <!-- <h4 class="qualification__modal-title"></h4> -->
-                                        <p style="text-align:center"><img src="assets/img/Experience/ja.png"
-                                                alt=""></p>
-                                        <i class="uil uil-times qualification__modal-close"></i>
-
-                                        <ul class="qualification__modal-works grid">
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p> Perform report generation, data extraction, cleaning, and analysis for insightful business decision-making. Specifically, extracted, transformed, and cleaned data of historical donors. insights from that were used to provide advice to guide future campaigns.</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p> Apart from data management and analysis, I conduct regular system audits to ensure the implementation of robust security protocols and also manage and maintain user accounts on both Microsoft Office 365 and Salesforce</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p> Successful collaboration with partners at Belmar to migrate data from a divisional chatter to a national chatter, involving meticulous data extraction, cleaning, alignment of migration object to the existing objects at the national chatter.</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                        </div>
-
-                        <!--==================== QUALIFICATION 2 ====================-->
-                        <div class="qualification__data">
-
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Award Selection Automation Programming Support</h3>
-                                <span class="qualification__subtitle">Trent University</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    May 2023 - November 2023
-                                </div>
-
-                                <span
-                                    class="button button--flex button--small button--link qualification__button-modal">
-                                    What I did here
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </span>
-
-                                <div class="qualification__modal">
-                                    <div class="qualification__modal-content">
-                                        <!-- <h4 class="qualification__modal-title"></h4> -->
-                                        <p style="text-align:center"><img src="assets/img/Experience/trent3.jpg" alt="">
-                                        </p>
-                                        <i class="uil uil-times qualification__modal-close"></i>
-
-                                        <ul class="qualification__modal-works grid">
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>As a key member of a collaborative team, I played a pivotal role in developing an Award Selection Automation Shiny App using R. My primary responsibilities included designing and building a robust database to store staff details and utilizing RSQLite for efficient data management.</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Created several functions and R packages to aid the internal processing data to an effective automation process</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Contributed to the enhancement of the Shiny App by introducing additional features, catering to the evolving needs of our users. I maintained a proactive approach to user feedback, incorporating iterative updates into the application to enhance its functionality and user experience.</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>My commitment extended to providing continuous support for app development, addressing user inquiries, troubleshooting issues, and driving improvements based on valuable feedback.</p>
-                                                </p>
-                                            </li>
-                                            </p>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!--==================== QUALIFICATION 3 ====================-->
-                        <div class="qualification__data">
-
-                            <div>
-                                <h3 class="qualification__title">Data Reporting Analyst</h3>
-                                <span class="qualification__subtitle">Access Bank Plc</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    August 2018 - November 2022
-                                </div>
-
-                                <span
-                                    class="button button--flex button--small button--link qualification__button-modal">
-                                    What I did here
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </span>
-
-                                <div class="qualification__modal">
-                                    <div class="qualification__modal-content">
-                                        <!-- <h4 class="qualification__modal-title"></h4> -->
-                                        <p style="text-align:center"><img src="assets/img/Experience/Access.png"
-                                                alt=""></p>
-                                        <i class="uil uil-times qualification__modal-close"></i>
-
-                                        <ul class="qualification__modal-works grid">
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Developed and maintained Power BI dashboard reports that contained compliance and performance metrics for 552 branches, and regularly kept track of performance metrics on dashboards for management reporting. Provided recommendations to management based on insights from data for better service delivery in branches.
-</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Collaborated with cross-functional teams like the financial control team and Data Engineering Team to understand business requirements, collaborate on developing data extraction queries from the Oracle database based on analytical needs, and analyze data to generate reports for decision-making related to expense control in branches and budget maintenance.
-
-</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Created customer scripts and forms for urgent data collection from branches based on emergency information needs or financial breaches, Analyzed the collected data to explore the extent of damage or compliance, and advised management on indicative future steps upon deliberations.
-
-</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Participated in UATs for new products to branches, critiqued and gave recommendations for a data perspective, and trained new employees who were either in training school or those deployed to the unit.
-
-</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                        </div>
-
-                        <!--==================== QUALIFICATION 4 ====================-->
-                        <!--div class="qualification__data">
-
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Business Analyst</h3>
-                                <span class="qualification__subtitle">Quantiphi</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    October 2020 - August 2021
-                                </div>
-
-                                <span
-                                    class="button button--flex button--small button--link qualification__button-modal">
-                                    What I did here
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </span>
-
-                                <div class="qualification__modal">
-                                    <div class="qualification__modal-content">
-                                        <!-- <h4 class="qualification__modal-title"></h4> -->
-                                        <!--p style="text-align:center"><img src="assets/img/Experience/quantiphi.png"
-                                                alt=""></!--p>
-                                        <i class="uil uil-times qualification__modal-close"></i>
-
-                                        <ul class="qualification__modal-works grid">
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Researched and presented highlights of the US stimulus bills to
-                                                    internal stakeholders that informed Quantiphi’s Public Sector
-                                                    business strategy</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Performed market research on 200 organizations in the US
-                                                    Education industry and came up with an effective go-
-                                                    to market strategy that converted four cold leads</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Led two cold call introduction calls and presented Quantiphi’s
-                                                    solution deck that showcased how machine learning can be
-                                                    incorporated into the potential clients’ processes</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Analyzed and reported quarterly revenue figures to internal
-                                                    stakeholders using Looker dashboards</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Initiated and led the creation of an internal repository to keep
-                                                    track of research advancements in machine
-                                                    learning; this was leveraged by 230 people in the organization
-                                                    including founders</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </!--div>
-
-                        <!--==================== QUALIFICATION 5 ====================-->
-                        <!-- <div class="qualification__data">
-
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-
-                                <div>
-                                    <h3 class="qualification__title">Freelance Android Developer</h3>
-                                    <span class="qualification__subtitle">IPLit Solutions LLP</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        February 2020 - March 2020
-                                    </div>
-                                    <span
-                                        class="button button--flex button--small button--link qualification__button-modal">
-                                        What I did here
-                                        <i class="uil uil-arrow-right button__icon"></i>
-                                    </span>
-                                </div>
-
-                                <div class="qualification__modal">
-                                    <div class="qualification__modal-content">
-                                         <h4 class="qualification__modal-title"></h4>
-                                       <p style="text-align:center"><img src="assets/img/Experience/Iplit.png" alt="">
-                                        </p>
-                                        <i class="uil uil-times qualification__modal-close"></i>
-
-                                        <ul class="qualification__modal-works grid">
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Developed and deployed an Android application for handsfree token
-                                                    printing for use in hospitals and clinics</p>
-                                            </li>
-                                            <li class="qualification__modal-work">
-                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Currently in use in two hospitals across the city</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                        
-                    </div>
+                <div class="skills__bar" data-level="90%">
+                  <span class="skills__percentage"></span>
                 </div>
+              </div>
+              <div class="skills__item">
+                <div class="skills__info">
+                  <span class="skills__name">R</span>
+                  <span class="skills__level">90%</span>
+                </div>
+                <div class="skills__bar" data-level="90%">
+                  <span class="skills__percentage"></span>
+                </div>
+              </div>
+              <div class="skills__item">
+                <div class="skills__info">
+                  <span class="skills__name">PySpark</span>
+                  <span class="skills__level">75%</span>
+                </div>
+                <div class="skills__bar" data-level="75%">
+                  <span class="skills__percentage"></span>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="skills__group">
+            <h3 class="skills__title">
+              <i class="uil uil-brain"></i> Machine Learning
+            </h3>
+            <div class="skills__list">
+              <div class="skills__item">
+                <div class="skills__info">
+                  <span class="skills__name">Regression</span>
+                  <span class="skills__level">95%</span>
+                </div>
+                <div class="skills__bar" data-level="95%">
+                  <span class="skills__percentage"></span>
+                </div>
+              </div>
+              <div class="skills__item">
+                <div class="skills__info">
+                  <span class="skills__name">Neural Networks</span>
+                  <span class="skills__level">85%</span>
+                </div>
+                <div class="skills__bar" data-level="85%">
+                  <span class="skills__percentage"></span>
+                </div>
+              </div>
+              <div class="skills__item">
+                <div class="skills__info">
+                  <span class="skills__name">NLP</span>
+                  <span class="skills__level">65%</span>
+                </div>
+                <div class="skills__bar" data-level="65%">
+                  <span class="skills__percentage"></span>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!--==================== PROJECTS ====================-->
-   <!-- Section -->
-          <section id="projects">
-            <header class="major">
-              <h2 align = "center", class="section__title">Projects</h2>
-               <span class="section__subtitle">What I have been working on</span>
-            </header>
-            <div class="posts">
-              <article>
-                <a
-                  href="https://github.com/Alexadenuga/Predicting_churn_rate_ANN/blob/main/churn_rate_notebook.ipynb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/churn.png" alt=""
-                /></a>
-                <h3>Predicting Customer Churn with Artificial Neural Networks.</h3>
-                <p align="justify">
-                  This study used Ariticial Networks to model and Predict customer Churn. The data used for this study contains behavior customers in service offering to predict their churn. This modelling and prediction was performed using the Python programming language. The study also used the Keras library to build the Artificial Neural Network. 
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/Alexadenuga/Predicting_churn_rate_ANN/blob/main/churn_rate_notebook.ipynb"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://github.com/Alexadenuga/abalone_prediction_NN/blob/main/abalone.ipynb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/abalone2.jpg" alt=""
-                /></a>
-                <h3>Machine Learning Method to Predict the Age of Abalone.</h3>
-                <p align="justify">
-                  The price of an Abalone snail is determined by its age, and the age of the snail can only be predicted from several measurements of the shells. This study explored the machine learning method to predict the age of an Abalone snail from its physical measurements. The study used the Python programming language and the Scikit-Learn library to build the machine learning model.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/Alexadenuga/abalone_prediction_NN/blob/main/abalone.ipynb"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://github.com/Alexadenuga/machine_learning_RNN_bike_data/blob/main/bike_machine_learning.ipynb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/bike.png" alt=""
-                /></a>
-                <h3>
-                  Comparing Different Frameworks of Recurrent Neural Network Using Bike Rental Data (SImpleRNN, LSTM and GRU)
-                </h3>
-                <p align="justify">
-                  Using the extensive machine learning infrastructure available in python, three different Recurrent Neural Network frameworks were used an a Bike rental data to compare performance of these frameworks based on predictive accuracy in order to better advise on which to use on a similar dataset.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/Alexadenuga/machine_learning_RNN_bike_data/blob/main/bike_machine_learning.ipynb"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://github.com/Alexadenuga/Ford_Engine_issue_with_CNN/blob/main/ford.ipynb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/ford.jpg" alt=""
-                /></a>
-                <h3>
-                  Classifying Engine Specific Issues Using Convolutional Neural Networks.
-                </h3>
-                <p align="justify">
-                  This study used the extensive power in python and Convolutional Neural Network to determine the specific issues that is wrong with a Car using data from Ford Motors.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/Alexadenuga/Ford_Engine_issue_with_CNN/blob/main/ford.ipynb"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://github.com/Alexadenuga/Cancer-Prevalence-in-USA-study/blob/master/cancer-prevalence-on-economically-deprived-in-the-USA.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/cancer.jpg" alt=""
-                /></a>
-                <h3>
-                  Cancer Prevalence on Economically Deprived Counties in the United State.
-                </h3>
-                <p align="justify">
-                  The R programming language was used to explore the prevalence of Cancer in certain economically deprived Counties in the United State. A Multiple regression model was used to explore the extent to which clinical trials initiative were implemented in these Counties.<br />
-                  <br />
-                  Collaborator: Farouk Gbadamosi
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/Alexadenuga/Cancer-Prevalence-in-USA-study/blob/master/cancer-prevalence-on-economically-deprived-in-the-USA.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://github.com/Alexadenuga/Predicting-diabetes-with-PIMA-dataset/blob/main/predicting-diabetes-using-the-PIMA-indian-diabetes-dataset.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/diab.png" alt=""
-                /></a>
-                <h3>Predicting Diabetes Using the PIMA Indian Diabetes Dataset of Akimel O' Odham Heritage.</h3>
-                <p align="justify">
-                  This report explored the PIMA Idian dataset of the people of Gila River Idian Community. R programming was used to predict the prevalence of Diabetes in this community.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/Alexadenuga/Predicting-diabetes-with-PIMA-dataset/blob/main/predicting-diabetes-using-the-PIMA-indian-diabetes-dataset.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://www.researchgate.net/publication/352465996_MULTIVARIATE_TIME_SERIES_ANALYSIS_ON_THE_PRICES_OF_STAPLE_FOODSTUFFS_IN_KWARA_STATE_NIGERIA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/market.jpg" alt=""
-                /></a>
-                <h3>
-                  Multivariate Time Series Analysis of the Prices of Staple FoodStuffs in Kwara State, Nigeria.
-                </h3>
-                <p align="justify">
-                  Prices of staple foodstuff were collected from the Bureau of Statistics and analyzed with the Eviews statistical software. We used Multivariate time serie analysis to check for co-dependencies in these prices and predict future prices of these foodstuff.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://www.researchgate.net/publication/352465996_MULTIVARIATE_TIME_SERIES_ANALYSIS_ON_THE_PRICES_OF_STAPLE_FOODSTUFFS_IN_KWARA_STATE_NIGERIA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
-              <article>
-                <a
-                  href="https://www.researchgate.net/publication/352441538_STATISTICAL_COMPARISON_OF_MULTIPLE_IMPUTATION_AND_LIST-WISE_DELETION_ON_PARAMETRIC_SURVIVAL_MODELS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="image"
-                  ><img src="assets/img/Portfolio/missing.jpg" alt=""
-                /></a>
-                <h3>Statistical Comparison of Multiple Imputation and List-Wise Deletion on Parametric Survaival Models.</h3>
-                <p align="justify">
-                  Missing Data is a common problem in everyday data. We explored the effect of missing data on parametric survival models using the R programming language. Specifically, we compared the performance of Multiple Imputation and List-Wise Deletion on proportional hazard, Exponential, Weibull and the Gompertz survival models.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://www.researchgate.net/publication/352441538_STATISTICAL_COMPARISON_OF_MULTIPLE_IMPUTATION_AND_LIST-WISE_DELETION_ON_PARAMETRIC_SURVIVAL_MODELS"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="button"
-                      >Read More</a
-                    >
-                  </li>
-                </ul>
-              </article>
+      <!-- Projects Section -->
+      <section class="projects section" id="projects">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__subtitle">My recent work</span>
+
+        <div class="projects__container container grid">
+          <article class="projects__card">
+            <img
+              src="assets/img/Portfolio/churn.png"
+              alt="Customer Churn Prediction"
+              class="projects__img"
+            />
+            <div class="projects__content">
+              <h3 class="projects__title">Customer Churn Prediction</h3>
+              <p class="projects__description">
+                Built an artificial neural network to predict customer churn
+                using Keras and Python.
+              </p>
+              <a
+                href="https://github.com/Alexadenuga/Predicting_churn_rate_ANN"
+                target="_blank"
+                class="projects__button"
+              >
+                View Project <i class="uil uil-arrow-right"></i>
+              </a>
             </div>
-          </section>
+          </article>
 
-  
-        <!--==================== CERTIFICATIONS ====================-->
-        <section class="certification section" id="certification">
-            <h2 class="section__title">Certifications</h2>
-            <span class="section__subtitle">Extra Courses I have Undertaken</span>
-
-            <div class="certification__container container grid">
-
-                <!--==================== CERTIFICATION 1 ====================-->
-                <div class="certification__content">
-                    <div>
-                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
-                        <p style="text-align: center;"><img src="assets/img/Certifications/udemy2.png"></p>
-                        <h4 class="certification__title">The Ultimate MySQL Bootcamp</h4>
-                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
-                    </div>
-
-                    <a class="button button--flex button--small button--link certification__button"
-                        href="https://www.udemy.com/certificate/UC-84d2dedd-c0bd-4fdc-a7fd-669e69d62d44/">
-                        View Certificate
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <!--==================== CERTIFICATION 2 ====================-->
-                <div class="certification__content">
-                    <div>
-                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
-                        <p style="text-align: center;"><img src="assets/img/Certifications/udemy2.png"></p>
-                        <h4 class="certification__title">Microsoft Power Bi Desktop for Business Intelligence</h4>
-                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
-                    </div>
-
-                    <a class="button button--flex button--small button--link certification__button"
-                        href="https://www.udemy.com/certificate/UC-8a3c568b-cb65-4a3f-8055-96a4bc32553d/">
-                        View Certificate
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <!--==================== CERTIFICATION 3 ====================-->
-                <div class="certification__content">
-                    <div>
-                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
-                        <p style="text-align: center;"><img src="assets/img/Certifications/udacity.jpg"></p>
-                        <h4 class="certification__title">Introduction to Programming Nanodegree</h4>
-                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
-                    </div>
-
-                    <a class="button button--flex button--small button--link certification__button"
-                        href="https://drive.google.com/file/d/1AHVPzWkTshj1O7ZbW5yosc6AN8Mn9mKM/view?usp=sharing">
-                        View Certificate
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <!--==================== CERTIFICATION 4 ====================-->
-                <div class="certification__content">
-                    <div>
-                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
-                        <p style="text-align: center;"><img src="assets/img/Certifications/ibm.png"></p>
-                        <h4 class="certification__title">Enterprise Design Thinking Practitioner</h4>
-                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
-                    </div>
-
-                    <a class="button button--flex button--small button--link certification__button"
-                        href="https://www.credly.com/badges/fc3cc5d5-2f36-4e49-a99d-dc9dcc248c74">
-                        View Certificate
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <!--==================== CERTIFICATION 5 ====================-->
-                <div class="certification__content">
-                    <div>
-                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
-                        <p style="text-align: center;"><img src="assets/img/Certifications/cibn.png"></p>
-                        <h4 class="certification__title">Associate Chartered Banker</h4>
-                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
-                    </div>
-
-                    <a class="button button--flex button--small button--link certification__button"
-                        href="https://drive.google.com/file/d/1pLLu4YBTkuuUBGtfN4V7rSWCSXFBiJl7/view?usp=sharing">
-                        View Certificate
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-
-                <!--==================== CERTIFICATION 6 ====================-->
-
-
+          <article class="projects__card">
+            <img
+              src="assets/img/Portfolio/abalone2.jpg"
+              alt="Abalone Age Prediction"
+              class="projects__img"
+            />
+            <div class="projects__content">
+              <h3 class="projects__title">Abalone Age Prediction</h3>
+              <p class="projects__description">
+                Machine learning model to predict abalone age from physical
+                measurements.
+              </p>
+              <a
+                href="https://github.com/Alexadenuga/abalone_prediction_NN"
+                target="_blank"
+                class="projects__button"
+              >
+                View Project <i class="uil uil-arrow-right"></i>
+              </a>
             </div>
-        </section>
+          </article>
+        </div>
+      </section>
 
+      <!-- Certifications Section -->
+      <section class="certification section" id="certification">
+        <h2 class="section__title">Certifications</h2>
+        <span class="section__subtitle">My completed courses</span>
 
+        <div class="certification__container container grid">
+          <div class="certification__card">
+            <img
+              src="assets/img/Certifications/udemy2.png"
+              alt="Udemy Certification"
+              class="certification__img"
+            />
+            <h3 class="certification__title">The Ultimate MySQL Bootcamp</h3>
+            <a
+              href="https://www.udemy.com/certificate/UC-84d2dedd-c0bd-4fdc-a7fd-669e69d62d44/"
+              target="_blank"
+              class="certification__button"
+            >
+              View Certificate <i class="uil uil-external-link-alt"></i>
+            </a>
+          </div>
 
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in Touch</span>
+          <div class="certification__card">
+            <img
+              src="assets/img/Certifications/udemy2.png"
+              alt="Udemy Certification"
+              class="certification__img"
+            />
+            <h3 class="certification__title">Power BI Desktop</h3>
+            <a
+              href="https://www.udemy.com/certificate/UC-8a3c568b-cb65-4a3f-8055-96a4bc32553d/"
+              target="_blank"
+              class="certification__button"
+            >
+              View Certificate <i class="uil uil-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-phone contact__icon"></i>
+      <!-- Contact Section -->
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get in touch</span>
 
-                        <div>
-                            <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">+1 (905) 783-7296</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <a href="mailto: alexadenuga@gmail.com">
-                                <h3 class="contact__title">Email</h3>
-                            </a>
-                            <a href="mailto: alexadenuga@gmail.com"><span
-                                    class="contact__subtitle">alexadenuga@gmail.com</span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle">Ottawa, Ontario, Canada</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="contact__container container grid">
+          <div class="contact__info">
+            <div class="contact__card">
+              <i class="uil uil-envelope contact__icon"></i>
+              <h3 class="contact__title">Email</h3>
+              <span class="contact__data">alexadenuga@gmail.com</span>
+              <a href="mailto:alexadenuga@gmail.com" class="contact__button">
+                Write me <i class="uil uil-arrow-right"></i>
+              </a>
             </div>
 
-        </section>
+            <div class="contact__card">
+              <i class="uil uil-phone contact__icon"></i>
+              <h3 class="contact__title">Phone</h3>
+              <span class="contact__data">+1 (905) 783-7296</span>
+              <a href="tel:+19057837296" class="contact__button">
+                Call me <i class="uil uil-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <form action="" class="contact__form">
+            <div class="contact__inputs">
+              <div class="contact__content">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder=" "
+                  class="contact__input"
+                  required
+                />
+                <label for="" class="contact__label">Name</label>
+              </div>
+              <div class="contact__content">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder=" "
+                  class="contact__input"
+                  required
+                />
+                <label for="" class="contact__label">Email</label>
+              </div>
+            </div>
+
+            <div class="contact__content">
+              <input
+                type="text"
+                name="subject"
+                placeholder=" "
+                class="contact__input"
+                required
+              />
+              <label for="" class="contact__label">Subject</label>
+            </div>
+
+            <div class="contact__content">
+              <textarea
+                name="message"
+                placeholder=" "
+                class="contact__input contact__area"
+                required
+              ></textarea>
+              <label for="" class="contact__label">Message</label>
+            </div>
+
+            <button type="submit" class="button button--flex">
+              Send Message <i class="uil uil-message button__icon"></i>
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <!--==================== FOOTER ====================-->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Alex</h1>
-                    <!-- <span class="footer__subtitle">Data Scientist</span> -->
-                </div>
+      <div class="footer__container container">
+        <h1 class="footer__title">Alex Adenuga</h1>
+        <p class="footer__description">
+          Data Scientist & Machine Learning Engineer
+        </p>
 
-                <ul class="footer__links">
-                    <li>
-                        <a href="#skills" class="footer__link">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#projects" class="footer__link">Projects</a>
-                    </li>
-                   
-                    <li>
-                        <a href="#certification" class="footer__link">Certifications</a>
-                    </li>
-                   
-                    <li>
-                        <a href="#contact" class="footer__link">Contact</a>
-                    </li>
-                </ul>
+        <ul class="footer__list">
+          <li><a href="#home" class="footer__link">Home</a></li>
+          <li><a href="#about" class="footer__link">About</a></li>
+          <li><a href="#skills" class="footer__link">Skills</a></li>
+          <li><a href="#projects" class="footer__link">Projects</a></li>
+          <li>
+            <a href="#certification" class="footer__link">Certifications</a>
+          </li>
+          <li><a href="#contact" class="footer__link">Contact</a></li>
+        </ul>
 
-                <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/alexadenuga" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-
-                    <a href="https://www.github.com/alexadenuga" target="_blank" class="footer__social">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-
-                    <a href="https://www.twitter.com/@alexadenuga" target="_blank" class="footer__social">
-                        <i class="uil uil-twitter-alt"></i>
-                    </a>
-
-                                       
-                </div>
-            </div>
-
-            <p class="footer__copy">&#169; 2023 Alex Adenuga. All rights reserved</p>
+        <div class="footer__social">
+          <a
+            href="https://www.linkedin.com/in/alexadenuga"
+            target="_blank"
+            class="footer__social-link"
+          >
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a
+            href="https://www.github.com/Alexadenuga"
+            target="_blank"
+            class="footer__social-link"
+          >
+            <i class="uil uil-github-alt"></i>
+          </a>
+          <a
+            href="https://www.twitter.com/@alexadenuga"
+            target="_blank"
+            class="footer__social-link"
+          >
+            <i class="uil uil-twitter-alt"></i>
+          </a>
         </div>
+
+        <p class="footer__copy">
+          © <span id="current-year">2023</span> Alex Adenuga. All rights
+          reserved
+        </p>
+      </div>
     </footer>
 
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
+    <!-- Scroll Up -->
+    <a href="#home" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <!--==================== MAIN JS ====================-->
+    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

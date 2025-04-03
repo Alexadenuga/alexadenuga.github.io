@@ -178,42 +178,156 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", activateCurrentSection);
 
   // ===== Contact Form Handling =====
-  const contactForm = document.querySelector(".contact__form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
+  // main.js - Complete FormSubmit Implementation
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.querySelector(".contact__form");
 
-      // Get form values
-      const formData = {
-        name: this.querySelector('input[name="name"]').value.trim(),
-        email: this.querySelector('input[name="email"]').value.trim(),
-        subject: this.querySelector('input[name="subject"]').value.trim(),
-        message: this.querySelector('textarea[name="message"]').value.trim(),
-      };
+    if (contactForm) {
+      contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-      // Simple validation
-      if (!formData.name || !formData.email || !formData.message) {
-        alert("Please fill in all required fields");
-        return;
-      }
+        // Get form elements
+        const formElements = this.elements;
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
 
-      // Email validation regex
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(formData.email)) {
-        alert("Please enter a valid email address");
-        return;
-      }
+        // Show loading state
+        submitButton.innerHTML =
+          '<i class="uil uil-spinner uil-spin"></i> Sending...';
+        submitButton.disabled = true;
 
-      // Here you would typically send the form data to a server
-      console.log("Form submitted:", formData);
+        try {
+          // Validate form
+          if (
+            !formElements.name.value.trim() ||
+            !formElements.email.value.trim() ||
+            !formElements.message.value.trim()
+          ) {
+            throw new Error("Please fill in all required fields");
+          }
 
-      // Show success message
-      alert("Thank you for your message! I will get back to you soon.");
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(formElements.email.value.trim())) {
+            throw new Error("Please enter a valid email address");
+          }
 
-      // Reset form
-      this.reset();
-    });
-  }
+          // Prepare form data
+          const formData = new FormData(this);
+
+          // Send to FormSubmit
+          const response = await fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          // Check response
+          if (response.ok) {
+            showAlert("Message sent successfully!", "success");
+            this.reset();
+
+            // Reset floating labels
+            document.querySelectorAll(".contact__label").forEach((label) => {
+              label.style.top = "0.75rem";
+              label.style.fontSize = "var(--small-font-size)";
+            });
+          } else {
+            throw new Error("Failed to send message");
+          }
+        } catch (error) {
+          console.error("Form submission error:", error);
+          showAlert(
+            error.message || "Failed to send message. Please try again.",
+            "error"
+          );
+        } finally {
+          // Reset button state
+          submitButton.innerHTML = originalButtonText;
+          submitButton.disabled = false;
+        }
+      });
+    }
+
+    // Alert notification function
+    function showAlert(message, type) {
+      // Remove any existing alerts first
+      const existingAlert = document.querySelector(".form-alert");
+      if (existingAlert) existingAlert.remove();
+
+      // Create alert element
+      const alertEl = document.createElement("div");
+      alertEl.className = `form-alert form-alert-${type}`;
+      alertEl.textContent = message;
+
+      // Style the alert (you can customize these)
+      alertEl.style.position = "fixed";
+      alertEl.style.top = "20px";
+      alertEl.style.right = "20px";
+      alertEl.style.padding = "12px 24px";
+      alertEl.style.borderRadius = "4px";
+      alertEl.style.color = "white";
+      alertEl.style.backgroundColor = type === "error" ? "#e74c3c" : "#2ecc71";
+      alertEl.style.zIndex = "10000";
+      alertEl.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+      alertEl.style.animation = "alertSlideIn 0.3s ease-out";
+
+      // Add to DOM
+      document.body.appendChild(alertEl);
+
+      // Remove after 5 seconds
+      setTimeout(() => {
+        alertEl.style.animation = "alertSlideOut 0.3s ease-in";
+        setTimeout(() => alertEl.remove(), 300);
+      }, 5000);
+    }
+
+    // Add required CSS animations
+    const style = document.createElement("style");
+    style.textContent = `
+        @keyframes alertSlideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes alertSlideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .uil-spin {
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+        }
+    `;
+    document.head.appendChild(style);
+  });
+
+  // Add CSS for animations
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+    .uil-spin {
+        animation: spin 1s linear infinite;
+        margin-right: 8px;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+  document.head.appendChild(style);
 
   // ===== Current Year in Footer =====
   const currentYear = new Date().getFullYear();
